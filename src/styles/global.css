@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 html {
+    position: relative;
     background-color: var(--md-sys-color-surface);
     font-family: 'Open Sans', sans-serif;
     color: var(--md-sys-color-on-surface);
+    z-index: -1;
 }
 
 body {
+    position: relative;
     margin: 0 auto;
     width: 100%;
     max-width: 80ch;
@@ -15,6 +18,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+    max-width: 100vw;
 }
 
 * {
@@ -79,7 +84,6 @@ h2{
 
 @media screen and (min-width: 636px) {
     .nav-links {
-        margin-left: 5em;
         display: block;
         position: static;
         width: auto;

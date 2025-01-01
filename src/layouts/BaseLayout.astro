@@ -3,12 +3,45 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 import "../styles/dark.css";
+import { SEO } from "astro-seo";
 
 const { pageTitle } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
+		<SEO
+			title="Website Resmi PPMI Madinah - Persatuan Pelajar dan Mahasiswa Madinah"
+			description="A heavily optimized description full of well-researched keywords."
+			openGraph={{
+				basic: {
+					title: "Website Resmi PPMI Madinah - Persatuan Pelajar dan Mahasiswa Madinah",
+					type: "A type.",
+					image: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+				},
+			}}
+			twitter={{
+				creator: "@ppmimadinah",
+			}}
+			extend={{
+				// extending the default link tags
+				link: [{ rel: "icon", href: "/favicon.ico" }],
+				// extending the default meta tags
+				meta: [
+					{
+						name: "twitter:image",
+						content:
+							"https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+					},
+					{
+						name: "twitter:title",
+						content: "Tinker Tailor Soldier Spy",
+					},
+					{ name: "twitter:description", content: "Agent" },
+				],
+			}}
+		/>
+
 		<meta charset="utf-8" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -19,7 +52,7 @@ const { pageTitle } = Astro.props;
 	<body>
 		<Header />
 		<h1>{pageTitle}</h1>
-        <slot />
+		<slot />
 		<Footer />
 		<script>
 			import "../scripts/menu.js";
