@@ -1,4 +1,4 @@
-import { getCollection } from 'astro:content';
+import { getCollection, rss } from 'astro:content';
 
 export async function GET(context) {
     const posts = await getCollection("blog");
