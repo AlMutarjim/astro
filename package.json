@@ -12,6 +12,8 @@
     "@astrojs/preact": "^4.0.1",
     "@astrojs/rss": "^4.0.10",
     "@astrojs/sitemap": "^3.2.1",
+    "@fontsource-variable/open-sans": "^5.1.1",
+    "@fontsource/open-sans": "^5.1.1",
     "astro": "^5.1.1",
     "astro-icon": "^1.1.5",
     "astro-seo": "^0.8.4",
