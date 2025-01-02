@@ -4,7 +4,7 @@ import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 import "../styles/dark.css";
 import { SEO } from "astro-seo";
-import '@fontsource-variable/open-sans';
+import "@fontsource-variable/open-sans";
 
 const { pageTitle } = Astro.props;
 ---
@@ -51,10 +51,12 @@ const { pageTitle } = Astro.props;
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<Header />
-		<h1>{pageTitle}</h1>
-		<slot />
-		<Footer />
+		<main id="main">
+			<Header />
+			<h1>{pageTitle}</h1>
+			<slot />
+			<Footer />
+		</main>
 		<script>
 			import "../scripts/menu.js";
 		</script>
