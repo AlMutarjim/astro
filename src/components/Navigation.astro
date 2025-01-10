@@ -3,15 +3,20 @@ import { Icon } from 'astro-icon/components'
 ---
 
 <div class="nav-links">
-    <Icon name="logo" />
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/blog">Blog</a>
-    <a href="/tags/">Tags</a>
+    <a href="/"><div class="link">Home</div></a>
+    <a href="/about"><div class="link">About</div></a>
+    <a href="/blog"><div class="link">Blog</div></a>
+    <a href="/tags/"><div class="link">Tags</div></a>
 </div>
 <style>
     a {
         font-weight: 100;
         color: var(--md-sys-color-on-surface);
+    }
+
+    .link{
+        display: flex;
+        background-color: white;
+        color: black;
     }
 </style>

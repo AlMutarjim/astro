@@ -1,0 +1,15 @@
+---
+const { label } = Astro.props;
+---
+
+<div class="button">{label}</div>
+<style>
+    .button {
+        display: flex;
+        background-color: var(--md-sys-color-primary-container);
+        color: var(--md-sys-color-on-primary-container);
+        font-size: 0.8em;
+        padding: 5px 15px;
+        border-radius: 16px;
+    }
+</style>

@@ -4,9 +4,6 @@ html {
     background-color: var(--md-sys-color-surface);
     font-family: 'Open Sans', sans-serif;
     color: var(--md-sys-color-on-surface);
-    z-index: -1;
-    background: url("../images/bg4.webp") no-repeat center;
-    background-size: cover;
 }
 
 body {
@@ -21,17 +18,9 @@ body {
     min-height: 100vh;
 }
 
-#main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(27 32 35 / 13%);
-    padding: 1em;
-    border-radius: 16px;
-    backdrop-filter: blur(5px);
-    width: 100%;
-    flex-grow: 1;
-    box-shadow: 2px 4px 10px -1px rgb(0 0 0 / 24%);
+header {
+    position: absolute;
+    top: 0;
 }
 
 * {
@@ -52,40 +41,35 @@ h2{
 }
 
 .hamburger {
-    padding-right: 20px;
+    position: relative;
     cursor: pointer;
-    position: fixed;
-    right: 0;
-    height: 0.5em;
-}
-
-.hamburger .line {
-    display: block;
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background-color: #ff9776;
+    height: 1.2em;
+font-size: 1.2em;
+    z-index: 2;
 }
 
 /* nav styles */
 
 .nav-links {
-    width: 100%;
-    top: 5rem;
-    left: 48px;
-    background-color: #ff9776;
+    flex-direction: column;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    width: 40vw;
+    align-items: flex-end;
+    padding: 1em;
+    height: 100vh;
     display: none;
-    margin: 0;
+    color: black;
 }
 
 .nav-links a {
     display: block;
     text-align: center;
-    padding: 10px 0;
     text-decoration: none;
     font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
+    color: black
 }
 
 .nav-links a:hover,
@@ -94,7 +78,7 @@ h2{
 }
 
 .expanded {
-    display: unset;
+    display: flex;
 }
 
 @media screen and (min-width: 636px) {

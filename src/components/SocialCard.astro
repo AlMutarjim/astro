@@ -1,5 +1,6 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
+import Button from "./Button.astro";
 
 const { platform, followers } = Astro.props;
 ---
@@ -8,38 +9,43 @@ const { platform, followers } = Astro.props;
   <div class="card">
     <Icon name={platform} size={48} />
     <div class="followers">{followers} Followers</div>
-    <div class="follow-button">Follow</div>
+    <Button label="Follow" />
   </div>
+
+  <style>
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgb(15 20 22 / 13%);
+      padding: 1em;
+      border-radius: 16px;
+      backdrop-filter: blur(5px);
+      width: 100%;
+      flex-grow: 1;
+      box-shadow: 2px 4px 10px -5px rgb(0 0 0 / 25%);
+      border: 1px solid #ffffff26;
+      justify-content: center;
+    }
+    a {
+      text-decoration: none;
+      color: var(--md-sys-color-on-surface);
+      margin: 1em;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5em;
+    }
+
+    .platform {
+      display: flex;
+    }
+
+    .followers {
+      display: flex;
+    }
+  </style>
 </a>
-
-<style>
-  a {
-    text-decoration: none;
-    color: var(--md-sys-color-on-surface);
-    margin:1em;
-  }
-
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5em;
-  }
-
-  .platform {
-    display: flex;
-  }
-
-  .followers {
-    display: flex;
-  }
-
-  .follow-button {
-    display: flex;
-    background-color: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
-    font-size: 0.8em;
-    padding: 10px 15px;
-    border-radius: 16px;
-  }
-</style>

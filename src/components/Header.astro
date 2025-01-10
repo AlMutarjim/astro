@@ -1,13 +1,35 @@
 ---
-import Navigation from "./Navigation.astro"
-import Hamburger from "./Hamburger.astro"
-import ThemeIcon from "./ThemeIcon.astro"
+import Navigation from "./Navigation.astro";
+import Hamburger from "./Hamburger.astro";
+import { Icon } from "astro-icon/components";
 ---
-
 
 <header>
     <nav>
-        <Hamburger/>
-        <Navigation/>
+        <Icon class="icon" name="logo" />
+        <p class="head-name">PPMI Madinah</p>
+        <Hamburger />
+        <Navigation />
     </nav>
 </header>
+<style>
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100vw;
+        padding: 1em 1.5em;
+    }
+
+    .head-name {
+        font-size: 1em;
+        margin: 0;
+        font-weight: 500;
+        color: white;
+    }
+
+    .icon {
+        font-size: 1.5em;
+    }
+</style>
